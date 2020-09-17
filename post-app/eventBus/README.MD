@@ -1,0 +1,1 @@
+## Barramento simplificado, funcionando com express (o ideal seria utilizar rabbitMQ, Kafka, etc)
