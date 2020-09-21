@@ -1,5 +1,5 @@
 # A Very Simple blog made with microservices
-This project is intended to be a simple representation of a blog, using basic concepts of microservices. None tool was used to manage the services used here.
+This project is intended to be a simple representation of a blog, using basic concepts of microservices. None tool (asides Docker) was used to manage the services used here.
 
 ## Services available
 - Posts
