@@ -16,3 +16,6 @@ Just run in each service folder
 npm install
 npm start
 ```
+
+## kubernetes
+The infra folder contains all files to deploy this application into k8s
