@@ -1,4 +1,4 @@
-# A Very Simple blog made with microservices
+# A Very Simple blog made using microservices architecture
 This project is intended to be a simple representation of a blog, using basic concepts of microservices. None tool (asides Docker) was used to manage the services used here.
 
 ## Services available
@@ -18,13 +18,23 @@ npm start
 ```
 
 ## kubernetes
-The infra folder contains all files to deploy this application into k8s. Use the following command:
-```kubectl apply -f .```
+The infra/k8s folder contains all files to deploy this application into k8s. Use the following command to achieve this.
+```
+kubectl apply -f .
+```
+
+## Skaffold
+Install Skaffold and run the command in the root path of the project
+```
+skaffold dev
+```
 
 ## How to access the application
 Make sure to change /etc/hosts file, adding the following
-```your_ip_address posts.com```
+```
+your_ip_address posts.com
+```
 
-If you are using minikube, use the command *minikube ip* to get the IP address
+If you are using minikube, use the command ```minikube ip``` to get the IP address.
 
-Next, access http://post.com on your browser
+Next, access http://post.com on your browser.
