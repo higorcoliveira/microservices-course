@@ -22,6 +22,12 @@ Install Skaffold and run the command in the root path of the project
 skaffold dev
 ```
 
+## Create secret in kubernetes
+Run the following command to create the secret used by all services
+```
+kubectl create secret generic jwt-secret --from-literal=jwt=asdf
+```
+
 ## How to access the application
 Make sure to change /etc/hosts file, adding the following
 ```
