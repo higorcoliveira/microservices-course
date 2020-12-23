@@ -29,6 +29,11 @@ kubectl create secret generic jwt-secret --from-literal=jwt=asdf
 ```
 
 ## How to access the application
+Run the following command into your cluster
+```
+k expose deployment nginx-ingress-controller --target-port=80 --type=NodePort -n kube-system
+```
+
 Make sure to change /etc/hosts file, adding the following
 ```
 your_ip_address tickets.dev
