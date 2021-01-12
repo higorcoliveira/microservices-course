@@ -15,6 +15,10 @@ The infra/k8s folder contains all files to deploy this application into k8s. Use
 ```
 kubectl apply -f .
 ```
+Use the docker driver inside minikube
+```
+minikube config set driver docker
+```
 
 ## Skaffold
 Install Skaffold and run the command in the root path of the project
@@ -29,9 +33,14 @@ kubectl create secret generic jwt-secret --from-literal=jwt=asdf
 ```
 
 ## How to access the application
-Run the following command into your cluster
+Run the following command into your cluster:
 ```
-k expose deployment nginx-ingress-controller --target-port=80 --type=NodePort -n kube-system
+kubectl get deploy -n kube-system
+```
+
+Get the name of the ingress deployment (will be something like ingress-nginx-controller) and execute:
+```
+kubectl expose deployment name_of_the_deployment --target-port=80 --type=NodePort -n kube-system
 ```
 
 Make sure to change /etc/hosts file, adding the following
